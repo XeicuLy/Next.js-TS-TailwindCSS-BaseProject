@@ -7,11 +7,69 @@
 # 使用技術情報
 
 - Next v13
+  - appディレクトリは不採用
 - TypeScript
+  - JSも使えるようになっているはずです。
 - ESLint
 - Prettier
 - Tailwind CSS
 - Volta
+
+# ディレクトリ構成について
+
+## /components
+
+アプリケーション全体で使うコンポーネントを入れるディレクトリ。
+
+## /components/elements
+
+アプリケーション全体で使う共通コンポーネントを置く。
+
+例えばボタンなど。ボタンを使うための useButton などがあればこのディレクトリの中へ。
+
+## /components/layouts
+
+アプリケーション全体で使うレイアウトコンポーネントを置く。
+
+例えば Header や Footer。
+
+管理者や一般ユーザーによってレイアウトを買えるならその Layout コンポーネントなどもこのディレクトリへ
+
+## /pages
+
+Next のページコンポーネントを入れる。
+
+ここのファイル名がルーティング用の URL になる。
+
+## /features
+
+ある特定の機能、ドメインでしか使わない api へのアクセサや定数、型、hooks,コンポーネントなどをすべて入れる。
+
+## /store
+
+アプリケーション全体のグローバルステートの管理に使う。
+
+## /const
+
+アプリケーション全体の定数を置く。
+
+## /hooks
+
+アプリケーション全体で使う共通ロジックを置く
+
+## libs
+
+ライブラリのラッパーや設定済みのインスタンスを export するファイルなどを置く。
+
+例えば、axios など。
+
+## /types
+
+アプリケーション全体で使う型ファイルを置く。
+
+## styles
+
+アプリケーション全体で使う CSS ファイルを置く。
 
 <hr>
 
@@ -22,11 +80,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
